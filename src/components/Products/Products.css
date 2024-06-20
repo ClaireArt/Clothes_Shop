@@ -1,0 +1,6 @@
+.admin_products_list_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}

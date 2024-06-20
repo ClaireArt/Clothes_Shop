@@ -1,0 +1,43 @@
+.active-link {
+    background-color: var(--lime-color);
+}
+
+.inactive-link {
+    background-color: white;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:768px) {
+
+    .active-link,
+    .inactive-link {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .inactive-link {
+        background-color: var(--lime-color);
+        color: black;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: var(--global-font);
+        text-decoration: none;
+    }
+
+    .active-link {
+        background-color: var(--lime-color);
+        color: black;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: var(--global-font);
+        text-decoration: none;
+    }
+
+    .active-link:hover,
+    .inactive-link:hover {
+        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.759);
+    }
+}

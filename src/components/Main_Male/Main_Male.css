@@ -1,0 +1,33 @@
+.male_shop_products {
+    width: 100%;
+}
+
+.male_shop_products_Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.male_shop_products_Content>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item>div {
+    width: 300px;
+}
+
+.item>span {
+    font-size: 20px;
+}
+
+

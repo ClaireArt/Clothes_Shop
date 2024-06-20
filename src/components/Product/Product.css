@@ -1,0 +1,126 @@
+.product_unique {
+    width: 100%;
+}
+
+.product_unique_Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 50px;
+}
+
+.product_unique_menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product_unique_menu_1>span,
+.product_unique_menu_2>div>span {
+    font-size: 18px;
+    font-family: var(--global-font);
+}
+
+.product_unique_menu_1>span:hover,
+.product_unique_menu_2>div>span:hover {
+   color:grey;
+}
+
+.product_unique_menu_2>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_unique_menu_1,
+.product_unique_menu_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.product_unique_box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.product_unique_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.product_unique_img>div {
+    max-width: 500px;
+    border: 1.2px solid black;
+}
+
+.product_unique_img>p {
+    max-width: 400px;
+    font-family: var(--global-font);
+}
+
+.border {
+    width: 400px;
+    height: 1px;
+    background-color: black;
+}
+
+.product_unique_info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product_unique_info>h1 {
+    font-size: 48px;
+    font-family: var(--global-font);
+}
+
+.product_unique_info>span {
+    font-size: 18px;
+}
+
+.product_unique_info>button {
+    width: 400px;
+    height: 50px;
+    font-family: var(--global-font);
+    font-size: 20px;
+    color: var(--lime-color);
+    background-color: black;
+    border: none;
+}
+
+.product_unique_info>button:hover {
+    background-color: rgba(0, 0, 0, 0.672);
+}
+
+/* -----------------------------Accordion----------------------- */
+.accordion {
+    display: block;
+    border: solid 1px black;
+    margin-bottom: 1rem;
+    border: none;
+    width: 400px;
+}
+
+.accordion__title {
+    padding: 10px;
+    font-family: var(--global-font);
+    font-size: 18px;
+}
+
+.accordion__content {
+    padding: 10px;
+}
+
+.accordion__content p {
+    max-width: 400px;
+    font-family: var(--global-font);
+    text-align: center;
+}

@@ -1,0 +1,177 @@
+.nav_menu {
+    display: flex;
+    border: 1px solid black;
+}
+
+.nav_menu>a {
+    border-right: 1px solid black;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    text-decoration: none;
+    color: black;
+    font-family: var(--global-font);
+    font-size: 18px;
+}
+
+.nav_menu>a:hover {
+    background-color: black;
+    color: var(--lime-color);
+}
+
+.nav_menu>div {
+    width: 25%;
+}
+
+.basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.basket>span {
+    cursor: pointer;
+}
+
+.basket_sum_box {
+    position: relative;
+    cursor: pointer;
+}
+
+.basket_sum {
+    color: var(--lime-color);
+    position: absolute;
+    transform: translate(-50%, -90%);
+    top: 75%;
+    left: 50%;
+    font-size: 15px;
+}
+
+/* ------------------------------------------burger-menu---------------------------------------- */
+section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Гамбургер иконка */
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin: 20px 10px;
+}
+
+.menu-btn .bar {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+    top: calc(50% - 9px);
+}
+
+.menu-btn .bar:nth-of-type(3) {
+    top: calc(50% + 9px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active .bar:nth-of-type(1) {
+    display: none;
+}
+
+.menu-btn.active .bar:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active .bar:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Меню, которое будет появляться */
+.nav-burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: var(--lime-color);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+
+.nav-burger.active {
+    transform: translateX(0);
+}
+
+.nav-burger .nav__list_item {
+    list-style-type: none;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.hidden_burger_menu {
+    display: none;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:768px) {
+    .basket>span>svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .basket_sum_box>span>svg {
+        width: 30px;
+        height: 30px;
+    }
+    .nav_menu>div {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .nav_menu {
+        display: none;
+    }
+
+    .hidden_burger_menu {
+        display: block;
+    }
+
+
+    .basket {
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: var(--global-font);
+    }
+
+    .nav-burger {
+        z-index: 2;
+    }
+
+    .menu-btn {
+        z-index: 9999;
+    }
+}

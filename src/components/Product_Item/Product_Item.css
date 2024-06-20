@@ -1,0 +1,43 @@
+.admin_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.admin_product>div>img {
+    max-width: 300px;
+}
+
+.admin_product>div {
+    overflow: hidden;
+}
+
+.admin_product>div>img:hover {
+    transform: scale(1.2);
+    transition: transform 300ms linear;
+}
+
+.delete_admin_item {
+    position: absolute;
+    bottom: 90%;
+    left: 88%;
+    border: 1px solid red;
+    border-radius: 30%;
+    padding: 5px;
+    background-color: black;
+    z-index: 9999;
+}
+
+.delete_admin_item:hover {
+    background-color: white;
+}
+
+.admin_product>span {
+    font-weight: bolder;
+}

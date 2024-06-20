@@ -1,0 +1,45 @@
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container>input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #e1fd74;
+    font-family: "Bricolage Grotesque", sans-serif;
+    transition: border-bottom-color 0.3s ease-in-out;
+    outline: none;
+}
+
+.input-container>input:focus {
+    border-bottom-color: #fff;
+}
+
+.login-form>button {
+    background-color: #e1fd74;
+    color: #24261a;
+    border: none;
+    border-radius: 54px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    width: 200px;
+    height: 40px;
+}
+
+.login-form>button:hover {
+    background-color: transparent;
+    border: 1px solid #e1fd74;
+    color: #fff;
+}
+
+.error {
+    color: #e1fd74;
+    font-style: italic;
+    margin: 5px 0;
+    text-align: center;
+}

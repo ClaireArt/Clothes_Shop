@@ -1,0 +1,26 @@
+header {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    font-family: var(--global-font);
+    padding: 18px 0;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:480px) {
+    .sale {
+        text-align: center;
+        font-size: 12px;
+    }
+}
