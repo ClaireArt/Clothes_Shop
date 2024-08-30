@@ -50,13 +50,13 @@
     font-size: 15px;
 }
 
-/* ------------------------------------------burger-menu---------------------------------------- */
+/* Burger Menu */
 section {
     display: flex;
     justify-content: flex-end;
 }
 
-/* Гамбургер иконка */
+/* Burger Icon */
 .menu-btn {
     width: 30px;
     height: 30px;
@@ -86,7 +86,7 @@ section {
     top: calc(50% + 9px);
 }
 
-/* Меняем гамбургер иконку, когда меню открыто */
+/* Change Burger Icon when menu is active */
 .menu-btn.active .bar:nth-of-type(1) {
     display: none;
 }
@@ -101,7 +101,7 @@ section {
     transform: translate(-50%, 0%) rotate(-45deg);
 }
 
-/* Меню, которое будет появляться */
+/* Burger Menu Appearance */
 .nav-burger {
     position: fixed;
     top: 0;
@@ -112,31 +112,39 @@ section {
     background: var(--lime-color);
     transform: translateX(100%);
     transition: transform 0.5s;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .nav-burger.active {
     transform: translateX(0);
 }
 
-.nav-burger .nav__list_item {
+.nav__list_item {
     list-style-type: none;
+    text-align: center; /* Center the text within the li */
+    width: 100%; /* Ensure the li takes full width */
 }
 
 .nav__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    justify-content: center; /* Vertically center the items */
+    align-items: center; /* Horizontally center the items */
+    gap: 60px;
+    height: 100%; /* Take full height of the burger menu */
+    padding: 0;
+    margin: 0;
 }
 
 .hidden_burger_menu {
     display: none;
 }
 
-/* --------------------------------------response---------------------------------------------------------- */
-@media screen and (max-width:768px) {
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
     .basket>span>svg {
         width: 30px;
         height: 30px;
@@ -151,7 +159,7 @@ section {
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
     .nav_menu {
         display: none;
     }
@@ -159,7 +167,6 @@ section {
     .hidden_burger_menu {
         display: block;
     }
-
 
     .basket {
         font-weight: bolder;
@@ -174,4 +181,9 @@ section {
     .menu-btn {
         z-index: 9999;
     }
+}
+
+/* Prevent scrolling when burger menu is active */
+.no-scroll {
+    overflow: hidden;
 }

@@ -11,23 +11,28 @@ function Nav_Menu() {
     const navigate = useNavigate();
 
     const handleOpenCartClick = () => {
-        navigate('cart')
-    }
+        navigate('cart');
+    };
 
-    // ----------------------burger-----------------------------
+    // Handle burger menu toggle
     const handleMenuToggle = () => {
         setIsActive(!isActive);
+        if (!isActive) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
     };
 
     const handleMenuItemClick = () => {
         setIsActive(false);
+        document.body.classList.remove('no-scroll');
     };
-
 
     return (
         <div>
             <div className='hidden_burger_menu'>
-                {/* -----------------------------burger-icon------------------------------ */}
+                {/* Burger Icon */}
                 <section>
                     <div className={`menu-btn ${isActive ? 'active' : ''}`} onClick={handleMenuToggle}>
                         <span className="bar"></span>
@@ -35,43 +40,42 @@ function Nav_Menu() {
                         <span className="bar"></span>
                     </div>
                 </section>
-                {/* ----------------------------------burger-menu------------------------- */}
+                {/* Burger Menu */}
                 <div className={`nav-burger ${isActive ? 'active' : ''}`}>
                     <nav>
                         <ul className="nav__list">
-                            {/* ---------------------------menu-1----------------------------- */}
+                            {/* Menu Item 1 */}
                             <li className="nav__list_item" onClick={handleMenuItemClick}>
                                 <div className='basket'>
                                     <span>{user}</span>
                                     <span>Войти</span>
                                     <div className='basket_sum_box' onClick={handleOpenCartClick}>
-                                        <span> {basket}</span>
+                                        <span>{basket}</span>
                                         <span className='basket_sum'>{data?.length}</span>
                                     </div>
                                 </div>
                             </li>
-                            {/* -----------------------------menu-2-------------------------- */}
+                            {/* Menu Item 2 */}
                             <li className="nav__list_item" onClick={handleMenuItemClick}>
                                 <Nav_Item txt='T SHOP' url='/' />
                             </li>
-                            {/* ------------------------------menu-3------------------------- */}
+                            {/* Menu Item 3 */}
                             <li className="nav__list_item" onClick={handleMenuItemClick}>
                                 <Nav_Item txt='Новинки' url='new_brand' />
                             </li>
-                            {/* ------------------------------menu-4------------------------- */}
+                            {/* Menu Item 4 */}
                             <li className="nav__list_item" onClick={handleMenuItemClick}>
                                 <Nav_Item txt='Женщинам' url='female' />
                             </li>
-                            {/* ------------------------------menu-5------------------------- */}
+                            {/* Menu Item 5 */}
                             <li className="nav__list_item" onClick={handleMenuItemClick}>
                                 <Nav_Item txt='Мужчинам' url='male' />
                             </li>
-                            {/* ------------------------------------------------------------- */}
                         </ul>
                     </nav>
                 </div>
             </div>
-            {/* ---------------------------------------------------------------------- */}
+            {/* Main Navigation */}
             <ul className='nav_menu'>
                 <Nav_Item txt='T SHOP' url='/' />
                 <div></div>
@@ -82,13 +86,13 @@ function Nav_Menu() {
                     <span>{user}</span>
                     <span>Войти</span>
                     <div className='basket_sum_box' onClick={handleOpenCartClick}>
-                        <span> {basket}</span>
+                        <span>{basket}</span>
                         <span className='basket_sum'>{data?.length}</span>
                     </div>
                 </div>
             </ul>
         </div>
-    )
+    );
 }
 
-export default memo(Nav_Menu)
+export default memo(Nav_Menu);
